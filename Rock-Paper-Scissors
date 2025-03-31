@@ -1,0 +1,58 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+secimler=[rock,paper,scissors]
+choice=input("What do you choose? Type 0 for Rock,1 for Paper or 2 for Scissors.")
+computer_choice=random.choice(secimler)
+if choice=="0":
+    print(rock)
+    if computer_choice==rock:
+        print("Computer choice: \n" + rock + "\nBerabere!")
+    elif computer_choice==paper:
+        print("Computer choice: \n" + paper + "\nKaybettin!")
+    elif computer_choice == scissors:
+        print("Computer choice: \n" + scissors + "\nKazadin!")
+if choice == "1":
+    print(paper)
+    if computer_choice==rock:
+        print("Computer choice: \n" + rock + "\nKazandin!")
+    elif computer_choice == paper:
+        print("Computer choice: \n" + paper + "\nBerabere!")
+    elif computer_choice== scissors:
+        print("Computer choice: \n" + scissors + "\nKaybettin!")
+if choice == "2":
+    print(scissors)
+    if computer_choice==rock:
+        print("Computer choice: \n" + rock + "\nKaybettin!")
+    elif computer_choice==paper:
+        print("Computer choice: \n" + paper + "\nKazandin!")
+    elif computer_choice==scissors:
+        print("Computer choice: \n" + scissors + "\nBerabere!")
+else:
+    print("Yanlis secim!")
+
